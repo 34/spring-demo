@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-      ORG               = ''
+      ORG               = '34'
       APP_NAME          = 'spring-demo'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
@@ -39,7 +39,7 @@ pipeline {
         }
         steps {
 
-            git 'https://github.com//spring-demo.git'
+            git 'https://github.com/34/spring-demo.git'
 
             // so we can retrieve the version in later steps
             sh "echo \$(jx-release-version) > VERSION"
